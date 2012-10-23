@@ -1,0 +1,6 @@
+#! /bin/sh
+NAME=nginx
+DESC=nginx
+DAEMON=/usr/local/nginx/sbin/nginx
+DAEMON_OPTS="-c /data/webstack/config/nginx/nginx.conf"
+PID_FILE=/data/log/nginx/$NAME.pid

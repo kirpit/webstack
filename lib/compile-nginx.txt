@@ -1,0 +1,11 @@
+################################
+# 
+# nginx compile options
+# 
+# kirpit
+################################
+
+./configure --with-http_ssl_module --with-debug
+
+# PRODUCTION
+./configure --with-http_ssl_module --user=wwwuser --group=wwwuser

@@ -1,0 +1,14 @@
+#! /bin/sh
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/bin/mongod
+DESC=database
+
+# Default defaults.  Can be overridden by the /etc/default/$NAME
+NAME=mongodb
+CONF=/data/webstack/config/mongodb/mongodb.ini
+DATA=/data/mongodb
+LOGDIR=/data/log/mongodb
+PIDFILE=$LOGDIR/$NAME.pid
+LOGFILE=$LOGDIR/$NAME.log  # Server logfile
+ENABLE_MONGODB=yes

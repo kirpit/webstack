@@ -1,0 +1,10 @@
+#! /bin/sh
+
+NAME=uwsgi
+DESC=uwsgi
+OWNER=wwwuser
+
+PATH=/opt/uwsgi:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/local/bin/uwsgi
+DAEMON_OPTS="--ini /data/webstack/config/uwsgi/uwsgi.ini"
+PID_FILE=/data/log/uwsgi/$NAME.pid
