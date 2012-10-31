@@ -4,15 +4,14 @@
 
 It currently includes config files for:
 
-* nginx
-* uwsgi
-* php5-fpm
-* mongodb
+* nginx (v1.2.4 tested)
+* uwsgi (v1.3 tested)
+* php5-fpm (not tested yet)
+* mongodb (not tested yet)
 
 It **does not** install these software mentioned above but collects their config and log files in one place. Currently, `/data` folder is being used almost for everything. Such folders are assumed to be created:
 
 * `/data/log` for the log files, also application specific sub-folders (i.e. `/data/log/nginx`)
-* `/data/pid` for the pid files
 * `/data/webstack` for this package
 * `/data/env` for Python virtualenv root
 * `/data/env/myproject/app` symbolic link to the project's application directory (see below)

@@ -8,8 +8,8 @@
 ./configure \
 --with-config-file-path=/data/webstack/config/php \
 --enable-fpm \
---with-fpm-user=wwwuser \
---with-fpm-group=wwwuser \
+--with-fpm-user=www-data \
+--with-fpm-group=www-data \
 --enable-debug \
 
 

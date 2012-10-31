@@ -5,7 +5,17 @@
 # kirpit
 ################################
 
-./configure --with-http_ssl_module --with-debug
+# STAGING
+./configure \
+--with-debug \
+--with-http_ssl_module \
+--with-http_gzip_static_module \
+--user=webuser \
+--group=webuser
 
 # PRODUCTION
-./configure --with-http_ssl_module --user=wwwuser --group=wwwuser
+./configure \
+--with-http_ssl_module \
+--with-http_gzip_static_module \
+--user=webuser \
+--group=webuser
