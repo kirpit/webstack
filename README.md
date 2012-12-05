@@ -4,15 +4,15 @@
 
 It currently includes config files for:
 
-* nginx (v1.2.4 tested)
-* uwsgi (v1.3 tested)
-* php5-fpm (not tested yet)
+* nginx (v1.2.5 tested)
+* uwsgi (v1.4.2 tested)
+* php (v5.4.8 tested with php-fpm)
 * mongodb (not tested yet)
 
-It **does not** install these software mentioned above but collects their config and log files in one place. Currently, `/data` folder is being used almost for everything. Such folders are assumed to be created:
+It **does not** install these software mentioned above but collects their config and log files in one place. Currently, `/data` folder is being used almost for everything. Such folders should be created:
 
-* `/data/log` for the log files, also application specific sub-folders (i.e. `/data/log/nginx`)
 * `/data/webstack` for this package
+* `/data/log` for the log files, also application specific sub-folders (i.e. `/data/log/nginx`)
 * `/data/env` for Python virtualenv root
 * `/data/env/myproject/app` symbolic link to the project's application directory (see below)
 * `/data/app` for projects directory (i.e. `/data/app/myproject`)
@@ -20,4 +20,4 @@ It **does not** install these software mentioned above but collects their config
 
 You may also need to create symbolic links one-by-one under your `/etc/default` (to `/data/webstack/etc/default`) directory to specify where all the configs files to these daemons.
 
-It is currently **beta**.
+It is currently **beta**, may cause unexpected results. Use at your own risk.

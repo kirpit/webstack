@@ -1,0 +1,12 @@
+#!/bin/sh
+
+prefix=/usr/local
+exec_prefix=/usr/local/bin
+
+php_ini=/data/webstack/config/php/php.ini
+
+php_fpm_BIN=/usr/local/sbin/php-fpm
+php_fpm_CONF=/data/webstack/config/php/php-fpm.conf
+php_fpm_PID=/data/log/php/php-fpm.pid
+
+php_opts="--fpm-config $php_fpm_CONF --pid $php_fpm_PID -c $php_ini"
