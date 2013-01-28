@@ -216,16 +216,29 @@ if [ "${LIMITS_SET}" ]
 	echo "" >> /etc/security/limits.conf
 fi
 
-# increase open files limit for "www-data"
-LIMITS_SET=$(grep 'www-data' /etc/security/limits.conf | grep nofile | grep -v '^#')
+# increase open files limit for "wwwuser"
+LIMITS_SET=$(grep 'wwwuser' /etc/security/limits.conf | grep nofile | grep -v '^#')
 if [ "${LIMITS_SET}" ]
  then
-	echo "www-data limits for nofiles already set to"
-	grep 'www-data' /etc/security/limits.conf | grep nofil | grep -v '^#'
+	echo "wwwuser limits for nofiles already set to"
+	grep 'wwwuser' /etc/security/limits.conf | grep nofil | grep -v '^#'
  else
-	echo "Setting limits for user www-data in /etc/security/limits.conf"
-	echo "www-data soft nofile 50000" >> /etc/security/limits.conf
-	echo "www-data hard nofile 60000" >> /etc/security/limits.conf
+	echo "Setting limits for user wwwuser in /etc/security/limits.conf"
+	echo "wwwuser soft nofile 50000" >> /etc/security/limits.conf
+	echo "wwwuser hard nofile 60000" >> /etc/security/limits.conf
+	echo "" >> /etc/security/limits.conf
+fi
+
+# increase open files limit for "postgres"
+LIMITS_SET=$(grep 'postgres' /etc/security/limits.conf | grep nofile | grep -v '^#')
+if [ "${LIMITS_SET}" ]
+ then
+	echo "postgres limits for nofiles already set to"
+	grep 'postgres' /etc/security/limits.conf | grep nofil | grep -v '^#'
+ else
+	echo "Setting limits for user postgres in /etc/security/limits.conf"
+	echo "postgres soft nofile 50000" >> /etc/security/limits.conf
+	echo "postgres hard nofile 60000" >> /etc/security/limits.conf
 	echo "" >> /etc/security/limits.conf
 fi
 

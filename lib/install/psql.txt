@@ -1,0 +1,6 @@
+apt-get -t squeeze-backports install postgresql-server-dev-9.1
+apt-get -t squeeze-backports install postgresql-9.1
+pg_dropcluster 9.1 main
+pg_createcluster -d /data/postgresql/ 9.1 main
+create symbolink links from /data/webstack/postgres/* to /etc/postgres/9.1/main *
+apt-get install postgresql-contrib-9.1    ----   "create extension dblink"

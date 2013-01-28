@@ -1,0 +1,16 @@
+# LIBRARIES
+apt-get -y install libcurl4-openssl-dev
+apt-get -y install gcc make
+apt-get -y install libxml2 libxml2-dev
+apt-get -y install openssl openssl-dev libcurl4-openssl-dev
+apt-get -y install libpcre3 libpcre3-dev
+apt-get -y install libreadline6 readline-common libreadline6-dev
+apt-get -y install libncurses5 libncurses5-dev
+apt-get -y install libgdbm3 libgdbm-dev
+
+# SOFTWARE
+apt-get -y install git
+apt-get -y install libsqlite3-dev sqlite3-doc
+
+# UTILS
+apt-get -y install htop sysv-rc-conf screen

@@ -10,6 +10,7 @@
 --enable-fpm \
 --with-fpm-user=www-data \
 --with-fpm-group=www-data \
+--with-pdo-pgsql \
 --with-openssl \
 --with-curl \
 --with-pgsql \
